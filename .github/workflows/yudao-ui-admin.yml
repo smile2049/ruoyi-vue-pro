@@ -42,9 +42,11 @@ jobs:
 
       - name: Install deps
         run: pnpm install
+        continue-on-error: true
 
       - name: Build
         run: pnpm run build:prod
+        continue-on-error: true
   
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
